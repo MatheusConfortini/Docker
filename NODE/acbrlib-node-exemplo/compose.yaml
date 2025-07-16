@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: projetoacbr/acbrlib_node:latest
+    container_name: acbrlib_node
+    #env_file: ./.env
+    environment:
+      NODE_ENV: production
+      DISPLAY: ':1'
+      PFX_PASS: $PFX_PASSWORD
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 3333:3333
+    networks:
+      - acbr_network
+
+networks:
+  acbr_network:
+    driver: bridge
