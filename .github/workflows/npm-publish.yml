@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 22
       - run: |
-          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibcep-node
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlib-node-comum
           npm i
           npm run build
 
@@ -32,7 +32,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       #- run: npm ci
       - run: |
-          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibcep-node
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlib-node-comum
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
