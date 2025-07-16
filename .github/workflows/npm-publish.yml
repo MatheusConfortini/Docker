@@ -17,8 +17,14 @@ jobs:
         with:
           node-version: 22
       - run: |
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlib-node-comum
+          npm install -g typescript yalc 
+          npm i
+          npm run build
+          yalc publish
           cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibnfe-node
           npm i
+          yalc add acbrlib-comum
           npm run build
 
   publish-npm:
