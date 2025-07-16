@@ -22,7 +22,7 @@ jobs:
           npm i
           npm run build
           yalc publish
-          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibnfe-node
+          cd ../acbrlibnfe-node
           npm i
           yalc add acbrlib-comum
           npm run build
@@ -38,7 +38,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       #- run: npm ci
       - run: |
-          pwd && ls -lha
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibnfe-node
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
