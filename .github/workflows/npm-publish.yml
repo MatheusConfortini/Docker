@@ -38,7 +38,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       #- run: npm ci
       - run: |
-          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibnfe-node
+          pwd && ls -lha
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
