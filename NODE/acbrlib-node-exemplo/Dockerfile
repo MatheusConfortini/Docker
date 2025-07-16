@@ -81,21 +81,25 @@ RUN mkdir /opt/acbrlib-nodejs/pdf && \
     npm i && \
     npm run build && \
     yalc publish && \
+
     cd /opt/acbrlib-nodejs/acbrlib-nodejs/acbrlibnfe-node && \
     npm i && \
     yalc add acbrlib-comum && \
     npm run build && \
     yalc publish && \
+
     cd /opt/acbrlib-nodejs/acbrlib-nodejs/acbrlibmdfe-node && \
     npm i && \
     yalc add acbrlib-comum && \
     npm run build && \
     yalc publish && \
+
     cd /opt/acbrlib-nodejs/acbrlib-nodejs/acbrlibcep-node && \
     npm i && \
     yalc add acbrlib-comum && \
     npm run build && \
     yalc publish && \
+    
     cd /opt/acbrlib-nodejs && \
     yalc add acbrlib-comum && \
     yalc add acbrlibnfe-node && \
