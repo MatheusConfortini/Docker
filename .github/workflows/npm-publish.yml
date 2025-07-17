@@ -25,7 +25,7 @@ jobs:
 
       - name: Build NFe
         run: |
-          cd ../acbrlibnfe-node
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibnfe-node
           npm install
           yalc add acbrlib-node-comum
           npm run build
@@ -33,7 +33,7 @@ jobs:
 
       - name: Build MDFe
         run: |
-          cd ../acbrlibmdfe-node
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibmdfe-node
           npm install
           yalc add acbrlib-node-comum
           npm run build
@@ -41,7 +41,7 @@ jobs:
 
       - name: Build CEP
         run: |
-          cd ../acbrlibcep-node
+          cd NODE/acbrlib-node-exemplo/acbrlib-nodejs/acbrlibcep-node
           npm install
           yalc add acbrlib-node-comum
           npm run build
